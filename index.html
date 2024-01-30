@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+
+    <!-- Entrada de números -->
+    <label for="numero1">Número 1:</label>
+    <input type="text" id="numero1" /><br />
+
+    <label for="numero2">Número 2:</label>
+    <input type="text" id="numero2" /><br />
+
+    <!-- Botones de operación -->
+    <button onclick="sumar()">Suma</button>
+    <button onclick="restar()">Resta</button>
+    <button onclick="multiplicar()">Multiplicación</button>
+    <button onclick="dividir()">División</button>
+    <button onclick="raizCuadrada()">Raíz Cuadrada</button>
+    <button onclick="raizCubica()">Raíz Cúbica</button>
+    <button onclick="potencia()">Potencia</button>
+
+    <!-- Resultado -->
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+      // Funciones para realizar operaciones
+      function sumar() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const numero2 = parseFloat(document.getElementById("numero2").value);
+        const resultado = numero1 + numero2;
+        document.getElementById("resultado").textContent = resultado;
+      }
+
+      function restar() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const numero2 = parseFloat(document.getElementById("numero2").value);
+        const resultado = numero1 - numero2;
+        document.getElementById("resultado").textContent = resultado;
+      }
+
+      function multiplicar() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const numero2 = parseFloat(document.getElementById("numero2").value);
+        const resultado = numero1 * numero2;
+        document.getElementById("resultado").textContent = resultado;
+      }
+
+      function dividir() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const numero2 = parseFloat(document.getElementById("numero2").value);
+        const resultado = numero1 / numero2;
+        document.getElementById("resultado").textContent = resultado;
+      }
+
+      function raizCuadrada() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const resultado = Math.sqrt(numero1);
+        document.getElementById("resultado").textContent = resultado;
+      }
+
+      function raizCubica() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const resultado = Math.cbrt(numero1);
+        document.getElementById("resultado").textContent = resultado;
+      }
+
+      function potencia() {
+        const numero1 = parseFloat(document.getElementById("numero1").value);
+        const numero2 = parseFloat(document.getElementById("numero2").value);
+        const resultado = Math.pow(numero1, numero2);
+        document.getElementById("resultado").textContent = resultado;
+      }
+    </script>
+  </body>
+</html>
